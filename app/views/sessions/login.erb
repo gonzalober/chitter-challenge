@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+<style>
+body {font-family: Verdana, Verdana, Verdana;}
+* {box-sizing: border-box}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  display: inline-block;}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;}
+
+button {
+  background-color: #4CAF60;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;}
+
+/*style for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44335;}
+
+</style>
+<body>
+
+<form action="/sessions" style="border:1px solid #ccc" method="POST">
+  <div class="container">
+  <div style="text-align:center">
+
+    <h1>Welcome to Chitter!</h1>
+
+    <h1>Login</h1>
+    <label for="email"><b>Please insert your email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="email" required>
+    <label for="psw"><b>Please insert your password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+    <button type="submit" class="loginbtn">Log In</button>
+
+</form>
+<form action="/sessions" style="border:1px solid #ccc" method="POST">
+    <h2>New User - Sign Up</h2>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+
+    <label for="email"><b>Please insert your email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+    <label for="psw"><b>Please insert your password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+    <label for="psw-repeat"><b>Please insert your name</b></label>
+    <input type="text" placeholder="enter name" name="name" required>
+
+    <label for="psw-repeat"><b>Please insert your username</b></label>
+    <input type="text" placeholder="enter user@name" name="user_name" required>
+    
+    <button type="button" class="cancelbtn">Cancel</button>
+    <button type="submit" class="signupbtn">Sign Up</button>
+    
+  </div>
+</form>
+
+</body>
+</html>

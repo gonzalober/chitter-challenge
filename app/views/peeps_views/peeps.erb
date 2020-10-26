@@ -1,0 +1,44 @@
+<h1>Peeps List</h1>
+<style> 
+/* Full-width input fields */
+input[type=text], input[type="hidden"] {
+  width: 100%;
+  padding: 15px;
+  display: inline-block;
+  border: none;
+}
+/* Set a style for all buttons */
+button {
+  background-color: #ffb3b3;
+  color: grey;
+  padding: 14px 20px;
+  margin: 2px 0;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+  opacity: 0.9;
+}
+/* Extra styles for the edit button */
+.editbtn {
+  padding: 14px 20px;
+  background-color: #A9A9A9;
+  color: blue;
+}
+
+</style>
+<ul>
+
+  <% @peeps.each do |peep| %>
+    <li class='peep' >
+      <a ><%= peep.text %></a>
+
+      was peeped on <a ><%= peep.created_date %></a>
+      by <a ><%= peep.name %></a>
+
+      <form action="/peeps/<%= peep.text %>" method="post">
+      
+      </form>
+    </li>
+  <% end %>
+
+</ul>
